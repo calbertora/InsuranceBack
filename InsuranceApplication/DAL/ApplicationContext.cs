@@ -3,9 +3,9 @@ using System.Data.Entity;
 
 namespace InsuranceApplication.DAL
 {
-    public class AppContext : DbContext
+    public class ApplicationContext : DbContext
     {
-        public AppContext() : base("AppContext")
+        public ApplicationContext() : base("ApplicationContext")
         {
         }
         public DbSet<Insurance> Insurances { get; set; }

@@ -30,9 +30,10 @@ namespace InsuranceApplication.Repositories
             context.SaveChanges();
         }
 
-        public void Delete(TEntity entity)
+        public void Delete(int ID)
         {
-            context.Set<TEntity>().Remove(entity);
+            TEntity data = context.Set<TEntity>().Find(ID);
+            context.Set<TEntity>().Remove(data);
             context.SaveChanges();
         }
 

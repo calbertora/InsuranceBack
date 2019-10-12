@@ -1,5 +1,6 @@
 ﻿using InsuranceApplication.Models;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace InsuranceApplication.DAL
 {
@@ -9,5 +10,11 @@ namespace InsuranceApplication.DAL
         {
         }
         public DbSet<Insurance> Insurances { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

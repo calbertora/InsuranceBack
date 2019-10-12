@@ -9,7 +9,7 @@ namespace InsuranceApplication.Repositories
 
         void Add(TEntity entity);
 
-        void Delete(TEntity entity);
+        void Delete(int ID);
 
         void Update(TEntity entity);
     }

@@ -22,6 +22,6 @@ namespace InsuranceApplication.Models
     public class PolicyTypes
     {
         public int ID { get; set; }
-        public string Descriptio { get; set; }
+        public string Description { get; set; }
     }
 }

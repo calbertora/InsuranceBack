@@ -13,7 +13,7 @@ namespace InsuranceApplication.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201910121334090_init"; }
+            get { return "201910121527219_init"; }
         }
         
         string IMigrationMetadata.Source

@@ -12,11 +12,21 @@ namespace InsuranceApplication.DAL
         private ApplicationContext context = new ApplicationContext();
 
         private Repository<Insurance> insuranceRepository;
+        private Repository<User> userRepository;
+
         public Repository<Insurance> InsuranceRepository
         {
             get
             {
                 return this.insuranceRepository ?? new Repository<Insurance>(context);
+            }
+        }
+
+        public Repository<User> UserRepository
+        {
+            get
+            {
+                return this.userRepository ?? new Repository<User>(context);
             }
         }
 

@@ -9,28 +9,34 @@ using System.Web.Http;
 
 namespace InsuranceApplication.Controllers
 {
-    public class InsuranceController : ApiController
+    public class UserController : ApiController
     {
-
         private UnitOfWork unitOfWork = new UnitOfWork();
 
         [HttpGet]
-        [Route("api/insurance")]
-        public IEnumerable<Insurance> GetAll()
+        [Route("api/user")]
+        public IEnumerable<User> GetAll()
         {
-            return unitOfWork.InsuranceRepository.GetAll();
+            return unitOfWork.UserRepository.GetAll();
+        }
+
+        [HttpGet]
+        [Route("api/user/{id}")]
+        public User Get(int id)
+        {
+            return unitOfWork.UserRepository.Get(id);
         }
 
         [HttpPost]
-        [Route("api/insurance")]
-        public IHttpActionResult Post(Insurance insurance)
+        [Route("api/user")]
+        public IHttpActionResult Post(User user)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    unitOfWork.InsuranceRepository.Add(insurance);
-                    return Ok("The Insurance was added");
+                    unitOfWork.UserRepository.Add(user);
+                    return Ok("The user was added");
                 }
                 else
                 {
@@ -43,23 +49,16 @@ namespace InsuranceApplication.Controllers
             }
         }
 
-        [HttpDelete]
-        [Route("api/insurance/{id}")]
-        public void Delete(int id)
-        {
-            unitOfWork.InsuranceRepository.Delete(id);
-        }
-
         [HttpPut]
         [Route("api/insurance")]
-        public IHttpActionResult Put([FromBody] Insurance insurance)
+        public IHttpActionResult Put([FromBody] User user)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    unitOfWork.InsuranceRepository.Update(insurance);
-                    return Ok("The Insurance has been updated");
+                    unitOfWork.UserRepository.Update(user);
+                    return Ok("The User has been updated");
                 }
                 else
                 {

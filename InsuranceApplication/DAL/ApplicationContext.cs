@@ -10,6 +10,7 @@ namespace InsuranceApplication.DAL
         {
         }
         public DbSet<Insurance> Insurances { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

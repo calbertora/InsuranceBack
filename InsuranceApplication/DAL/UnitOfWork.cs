@@ -11,7 +11,8 @@ namespace InsuranceApplication.DAL
     {
         private ApplicationContext context = new ApplicationContext();
 
-        private Repository<Insurance> insuranceRepository; public Repository<Insurance> InsuranceRepository
+        private Repository<Insurance> insuranceRepository;
+        public Repository<Insurance> InsuranceRepository
         {
             get
             {

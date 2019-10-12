@@ -39,7 +39,9 @@ namespace InsuranceApplication.Repositories
 
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            context.Set<TEntity>().Attach(entity);
+            context.Entry(entity).State = EntityState.Modified;
+            context.SaveChanges();
         }
     }
 }

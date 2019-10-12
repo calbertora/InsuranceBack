@@ -108,9 +108,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910112346128_Mig_.cs" />
-    <Compile Include="Migrations\201910112346128_Mig_.Designer.cs">
-      <DependentUpon>201910112346128_Mig_.cs</DependentUpon>
+    <Compile Include="Migrations\201910121334090_init.cs" />
+    <Compile Include="Migrations\201910121334090_init.Designer.cs">
+      <DependentUpon>201910121334090_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Insurance.cs" />
@@ -133,8 +133,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910112346128_Mig_.resx">
-      <DependentUpon>201910112346128_Mig_.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910121334090_init.resx">
+      <DependentUpon>201910121334090_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

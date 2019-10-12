@@ -56,5 +56,27 @@ namespace InsuranceApplication.Controllers
         {
             unitOfWork.InsuranceRepository.Delete(id);
         }
+
+        [HttpPut]
+        [Route("api/insurance")]
+        public IHttpActionResult Put([FromBody] Insurance insurance)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    unitOfWork.InsuranceRepository.Update(insurance);
+                    return Ok("The Insurance has been updated");
+                }
+                else
+                {
+                    return BadRequest("Couldn't update");
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
     }
 }

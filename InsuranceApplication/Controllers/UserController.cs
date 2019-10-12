@@ -50,7 +50,7 @@ namespace InsuranceApplication.Controllers
         }
 
         [HttpPut]
-        [Route("api/insurance")]
+        [Route("api/user")]
         public IHttpActionResult Put([FromBody] User user)
         {
             try

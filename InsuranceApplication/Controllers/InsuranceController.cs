@@ -15,6 +15,7 @@ namespace InsuranceApplication.Controllers
     {
         private UnitOfWork unitOfWork = new UnitOfWork();
 
+
         [HttpGet]
         [Route("api/insurance")]
         public IEnumerable<Insurance> GetAll()
@@ -26,6 +27,7 @@ namespace InsuranceApplication.Controllers
         [Route("api/insurance")]
         public IHttpActionResult Post(Insurance insurance)
         {
+                     
             try
             {
                 if (ModelState.IsValid)

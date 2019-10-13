@@ -15,13 +15,6 @@ namespace InsuranceApplication.Models
         public double Price { get; set; }
         public int TypeOfRisk { get; set; }
         public int CoveragePercentage { get; set; }
-        
-        public virtual ICollection<PolicyTypes> PolicyTypes { get; set; }
-    }
-
-    public class PolicyTypes
-    {
-        public int ID { get; set; }
-        public string Description { get; set; }
+        public string PolicyTypes { get; set; }
     }
 }

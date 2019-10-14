@@ -6,7 +6,7 @@ namespace InsuranceApplication.DAL
 {
     public class ApplicationContext : DbContext
     {
-        public ApplicationContext() : base("ApplicationContext_test")
+        public ApplicationContext() : base("InsuranceContext")
         {
         }
         public DbSet<Insurance> Insurances { get; set; }

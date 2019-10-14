@@ -23,6 +23,13 @@ namespace InsuranceApplication.Controllers
             return unitOfWork.InsuranceRepository.GetAll();
         }
 
+        [HttpGet]
+        [Route("api/insurance/{id}")]
+        public Insurance Get(int id)
+        {
+            return unitOfWork.InsuranceRepository.Get(id);
+        }
+
         [HttpPost]
         [Route("api/insurance")]
         public IHttpActionResult Post(Insurance insurance)
